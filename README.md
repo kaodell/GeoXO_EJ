@@ -7,7 +7,7 @@ All scripts in this folder were written by Kate O'Dell unless otherwise specifie
 ## Instructions
 To complete the analysis and create figures in the paper, the python scripts in this folder are run in the following order. 
 Note that the local and remote codes use different python environments. 
-Both environments are provided in this folder and are entitled py_env_local.yml and py_env_remote.yml, for the local and remote environments, respectively. 
+Both environments are provided in this folder and are entitled local_py_env.yml and remote_py_env.yml, for the local and remote environments, respectively. 
 
 ### Step 1) average gridded data to the census tract level
 #### Avg_to_census_tract.py
