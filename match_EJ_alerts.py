@@ -10,11 +10,11 @@ Created on Fri Jul 15 11:03:22 2022
 #%% user inputs
 # project folder which contains data output from prep_ACS_data.py, shapefiles for plotting,
 # and dataset from Gaige
-prj_folder = '/Users/kodell/Library/CloudStorage/GoogleDrive-kodell@email.gwu.edu/My Drive/Ongoing Projects/GeoXO/'
+prj_folder = '/Users/kodell/Library/CloudStorage/GoogleDrive-kodell@email.gwu.edu/My Drive/for_GW/Ongoing Projects/GeoXO/'
 
 # annual mean pm2.5 at the census tract level data path
 # output from avg_to_census_tract.py
-pm_data_path = '/Users/kodell/Library/CloudStorage/Box-Box/Shobha_data/'
+pm_data_path = '/Users/kodell/Library/CloudStorage/Box-Box/GW_box/Shobha_data/'
 
 # demographic data by census tract
 # output from prep_ACS_data.py
@@ -50,7 +50,7 @@ colors_ed = ['#bebada','#fdb462','#fccde5','#7fc97f']
 # colors for english language proficiency: english only, very well, less than very well
 colors_lng = ['#8dd3c7','#fb9a99','#80b1d3']
 # colors for CEJST : disadvantaged, not disadvantaged
-colors_cejst = ['royalblue','#b3b3b3']
+colors_cejst = ['#bc80bd','#d9d9d9']
 
 #%% import modules
 import pandas as pd
@@ -246,7 +246,7 @@ ax[1].text(40,15,'Disadvantaged',fontsize=10,fontweight='semibold',color = 'blac
         horizontalalignment='right')
 
 ax[2].text(0,92,'Graduate',fontsize=10,fontweight='semibold')
-ax[2].text(0,78,'Bachelors',fontsize=10,fontweight='semibold')
+ax[2].text(0,78,"Bachelor's",fontsize=10,fontweight='semibold')
 ax[2].text(0,38,'High School',fontsize=10,fontweight='semibold')
 ax[2].text(0,3,'< High School',fontsize=10,fontweight='semibold')
 
@@ -456,7 +456,8 @@ plt.tight_layout()
 plt.savefig(fig_out_path + 'final/race_cejst_bystate_'+fig_desc+'.png',dpi=300)
 
 # print numbers for figure discussion
-print('difference alerts most hisp - least hisp:',round(nat_ud[1]-nat_ld[1],1))
+print('most hisp',round(nat_ud[0],1),'least hisp:',round(nat_ld[0],1))
+print('difference alerts most hisp - least hisp:',round(nat_ud[0]-nat_ld[0],1))
 print(states[8],dem_strs_st[8],' difference alerts most hisp - least hisp:',round(st_alerts_ud[8]-st_alerts_ld[8],1))
 
 #%% Figure 3 - population weighted alerts and mean PM for geo and leo
@@ -479,7 +480,8 @@ for dem_str in dem_strs:
     ax[0].barh(i,abi1pm_alerts,color=bar_colors[ci],hatch='//',edgecolor='white',height=0.5)
     ax[0].barh(i+0.5,abi_alerts,color=bar_colors[ci],edgecolor='white', height=0.5)
     # print numbers for figure discussion in manuscript
-    print(dem_str,'\ntotal popw alerts:',round(abi_alerts,1))
+    print(dem_str,'\ntotal popw alerts (ABI-daytime):',round(abi_alerts,1))
+    # print('(ABI-1pm):',round(abi1pm_alerts,1))
 
     if i >= 2: # to allin the bars across each panel
         # panel b: disparity ratio for annual alerts
@@ -492,7 +494,7 @@ for dem_str in dem_strs:
         ax[2].barh(i,abi1pm_pm/total_abi1pm_conc-1,color=bar_colors[ci],hatch='//',edgecolor='white',height=0.5)
         # print numbers for figure discussion in manuscript
         print('alert ratio:',round(abi_alerts/total_abi_alerts,2),'conc ratio:',round(abi_pm/total_abi_conc,2))
-        print('%difference:',100*round(((abi_alerts/total_abi_alerts)-(abi_pm/total_abi_conc))/np.mean([(abi_alerts/total_abi_alerts),(abi_pm/total_abi_conc)]),2))
+        # print('%difference:',100*round(((abi_alerts/total_abi_alerts)-(abi_pm/total_abi_conc))/np.mean([(abi_alerts/total_abi_alerts),(abi_pm/total_abi_conc)]),2))
     i += 2
     ci += 1
 
@@ -647,7 +649,7 @@ ax[1].text(100,3,'Disadvantaged',fontsize=10,fontweight='semibold',color = 'blac
         horizontalalignment='right')
 
 ax[2].text(0,92,'Graduate',fontsize=10,fontweight='semibold')
-ax[2].text(0,78,'Bachelors',fontsize=10,fontweight='semibold')
+ax[2].text(0,78,"Bachelor's",fontsize=10,fontweight='semibold')
 ax[2].text(0,38,'High School',fontsize=10,fontweight='semibold')
 ax[2].text(0,3,'< High School',fontsize=10,fontweight='semibold')
 
