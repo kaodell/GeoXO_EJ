@@ -1,6 +1,6 @@
 # README
 This repository contains scripts and python3 environments used to produce the analysis and figures in  
-"Short-term pollution exposure and environmental justice implications" by O’Dell et al. in prep for ES&T Letters as of 07.28.23. 
+"Short-term pollution exposure and environmental justice implications" by O’Dell et al. submitted ES&T Letters (Manuscript ID: ez-2023-00548t) as of 07.31.23. 
 If you have any questions about these codes, want to use them, or find any errors, please contact Kate O’Dell at the contact email provided with this github page. 
 All scripts in this folder were written by Kate O'Dell unless otherwise specified.
 
