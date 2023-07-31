@@ -8,8 +8,8 @@ Created on Wed Sep  7 14:12:47 2022
 v0 - inital code
 """
 #%% user inputs
-ACS_data_path = '/Users/kodell/Library/CloudStorage/GoogleDrive-kodell@email.gwu.edu/My Drive/Ongoing Projects/GeoXO/population_data/ACS_IPUMS/'
-CEJST_data_path = '/Users/kodell/Library/CloudStorage/GoogleDrive-kodell@email.gwu.edu/My Drive/Ongoing Projects/GeoXO/population_data/CEJST_data/1.0-communities.csv'
+ACS_data_path = '/Users/kodell/Library/CloudStorage/GoogleDrive-kodell@email.gwu.edu/My Drive/for_GW/Ongoing Projects/GeoXO/population_data/ACS_IPUMS/'
+CEJST_data_path = '/Users/kodell/Library/CloudStorage/GoogleDrive-kodell@email.gwu.edu/My Drive/for_GW/Ongoing Projects/GeoXO/population_data/CEJST_data/1.0-communities.csv'
 out_fn = ACS_data_path + 'combined_trimmed_files_v1.csv'
 
 #%% import modules
