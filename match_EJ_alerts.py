@@ -257,7 +257,7 @@ ax[3].text(40,60,'Speaks English\nVery Well',fontsize=10,fontweight='semibold',c
 ax[3].text(40,20,'English Only',fontsize=10,fontweight='semibold',color = 'black',
         horizontalalignment='right')
 # save figure
-plt.savefig(fig_out_path+'final/language_ed_by_alert_days'+fig_desc+'.png',dpi=300)
+plt.savefig(fig_out_path+'final/language_ed_by_alert_days'+fig_desc+'.eps',dpi=300)
 fig.show()
 
 # print values for discussion in paper
@@ -336,7 +336,7 @@ for ai in range(2):
     ax[ai].set_xlim((-1,41))
     ax[ai].spines[['right', 'top']].set_visible(False)
 # save figure, will futher edit in power point
-plt.savefig(fig_out_path+'final/TOC_art_'+fig_desc+'.png',dpi=300)
+plt.savefig(fig_out_path+'final/TOC_art_'+fig_desc+'.eps',dpi=300)
 fig.show()
 
 #%% Figure 2 - decile plots by state
@@ -453,7 +453,7 @@ ax[2].text(24.5,0.5,'Disadvantaged',fontsize=10,fontweight='semibold',horizontal
            color='teal')
 # save figure
 plt.tight_layout()
-plt.savefig(fig_out_path + 'final/race_cejst_bystate_'+fig_desc+'.png',dpi=300)
+plt.savefig(fig_out_path + 'final/race_cejst_bystate_'+fig_desc+'.eps',dpi=300)
 
 # print numbers for figure discussion
 print('most hisp',round(nat_ud[0],1),'least hisp:',round(nat_ld[0],1))
@@ -527,7 +527,7 @@ ax[2].set_title('(c)')
 
 # save figure
 plt.tight_layout()
-plt.savefig(fig_out_path + 'final/national_nalerts_bypop_'+fig_desc+'_comb.png',dpi=300)
+plt.savefig(fig_out_path + 'final/national_nalerts_bypop_'+fig_desc+'_comb.eps',dpi=300)
 
 # print numbers for figure disucssion
 # done earlier in the for-loop
